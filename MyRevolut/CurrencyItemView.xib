@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CurrencyItemView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="133"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3zF-cF-JaQ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GBP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hfk-ej-SoR">
+                            <rect key="frame" x="32" y="16" width="150" height="51"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="42"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MzD-7f-jtr">
+                            <rect key="frame" x="190" y="16" width="153" height="51"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="42"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            <connections>
+                                <action selector="amountFieldDidChange:" destination="iN0-l3-epB" eventType="editingChanged" id="0cl-xm-U5p"/>
+                            </connections>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Hfk-ej-SoR" firstAttribute="width" secondItem="3zF-cF-JaQ" secondAttribute="width" multiplier="0.4" id="4nP-fq-M4x"/>
+                        <constraint firstItem="MzD-7f-jtr" firstAttribute="leading" secondItem="Hfk-ej-SoR" secondAttribute="trailing" constant="8" id="5h9-jC-in6"/>
+                        <constraint firstItem="MzD-7f-jtr" firstAttribute="top" secondItem="3zF-cF-JaQ" secondAttribute="top" constant="16" id="72E-cb-2oj"/>
+                        <constraint firstAttribute="bottom" secondItem="MzD-7f-jtr" secondAttribute="bottom" constant="8" id="DoJ-Hr-7Al"/>
+                        <constraint firstItem="Hfk-ej-SoR" firstAttribute="leading" secondItem="3zF-cF-JaQ" secondAttribute="leading" constant="32" id="dQ5-1w-vvZ"/>
+                        <constraint firstAttribute="bottom" secondItem="Hfk-ej-SoR" secondAttribute="bottom" constant="8" id="pNS-ry-dRl"/>
+                        <constraint firstAttribute="trailing" secondItem="MzD-7f-jtr" secondAttribute="trailing" constant="32" id="ub8-dj-lCs"/>
+                        <constraint firstItem="Hfk-ej-SoR" firstAttribute="top" secondItem="3zF-cF-JaQ" secondAttribute="top" constant="16" id="ufh-SV-wUx"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="3zF-cF-JaQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kCM-pv-QO1"/>
+                <constraint firstItem="3zF-cF-JaQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xEx-t9-mLL"/>
+                <constraint firstAttribute="trailing" secondItem="3zF-cF-JaQ" secondAttribute="trailing" id="yw5-TC-mDd"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="amountField" destination="MzD-7f-jtr" id="lSI-nj-fMZ"/>
+                <outlet property="currencyLabel" destination="Hfk-ej-SoR" id="KGa-cu-p0s"/>
+            </connections>
+            <point key="canvasLocation" x="3.5" y="23.5"/>
+        </view>
+    </objects>
+</document>
