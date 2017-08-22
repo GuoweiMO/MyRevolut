@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -38,7 +39,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="performExchangeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yN8-Dp-B6g"/>
+                                            <action selector="exchangeButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TjH-TH-114"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -156,14 +157,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3T6-Kb-bdH">
-                                <rect key="frame" x="183.5" y="97" width="135.5" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3T6-Kb-bdH">
+                                <rect key="frame" x="196" y="97" width="123" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sxo-ZH-13z">
-                                <rect key="frame" x="40" y="86.5" width="135.5" height="20.5"/>
+                                <rect key="frame" x="40" y="86.5" width="148" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -184,7 +185,7 @@
                             <constraint firstItem="7PQ-Bh-D4w" firstAttribute="leading" secondItem="9gU-80-jXu" secondAttribute="leading" id="cBw-s1-ks7"/>
                             <constraint firstItem="7PQ-Bh-D4w" firstAttribute="top" secondItem="9gU-80-jXu" secondAttribute="top" id="lO1-Yj-FS0"/>
                             <constraint firstAttribute="bottom" secondItem="Q9W-Iu-DfY" secondAttribute="bottom" constant="6" id="nhu-cn-In3"/>
-                            <constraint firstItem="Sxo-ZH-13z" firstAttribute="width" secondItem="3T6-Kb-bdH" secondAttribute="width" id="w1n-zz-Q8s"/>
+                            <constraint firstItem="Sxo-ZH-13z" firstAttribute="width" secondItem="3T6-Kb-bdH" secondAttribute="width" multiplier="1.2" id="w1n-zz-Q8s"/>
                             <constraint firstItem="Q9W-Iu-DfY" firstAttribute="top" secondItem="Sxo-ZH-13z" secondAttribute="bottom" constant="10" id="xec-t5-4bQ"/>
                         </constraints>
                     </view>

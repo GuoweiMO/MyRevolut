@@ -16,6 +16,7 @@
 		E49B0B9C1F44FC7900E526EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E49B0B9A1F44FC7900E526EB /* LaunchScreen.storyboard */; };
 		E49B0BA71F44FC7900E526EB /* MyRevolutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E49B0BA61F44FC7900E526EB /* MyRevolutTests.m */; };
 		E49B0BB81F46385C00E526EB /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = E49B0BB71F46385C00E526EB /* XMLDictionary.m */; };
+		E4A97FFB1F4C23DA003D47FC /* BalanceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A97FFA1F4C23DA003D47FC /* BalanceManager.m */; };
 		E4DDC5681F49D42700EE83F7 /* ExchangeRateConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DDC5671F49D42700EE83F7 /* ExchangeRateConnection.m */; };
 		E4DDC56B1F49D94600EE83F7 /* ExchangeRate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DDC56A1F49D94600EE83F7 /* ExchangeRate.m */; };
 		E4EF69281F4A496C00DB3822 /* CurrencyItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EF69261F4A496C00DB3822 /* CurrencyItemView.m */; };
@@ -54,6 +55,8 @@
 		E49B0BA81F44FC7900E526EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E49B0BB61F46385C00E526EB /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
 		E49B0BB71F46385C00E526EB /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
+		E4A97FF91F4C23DA003D47FC /* BalanceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BalanceManager.h; sourceTree = "<group>"; };
+		E4A97FFA1F4C23DA003D47FC /* BalanceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BalanceManager.m; sourceTree = "<group>"; };
 		E4DDC5661F49D42700EE83F7 /* ExchangeRateConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeRateConnection.h; sourceTree = "<group>"; };
 		E4DDC5671F49D42700EE83F7 /* ExchangeRateConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeRateConnection.m; sourceTree = "<group>"; };
 		E4DDC5691F49D94600EE83F7 /* ExchangeRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeRate.h; sourceTree = "<group>"; };
@@ -184,13 +187,31 @@
 			name = Libs;
 			sourceTree = "<group>";
 		};
-		E4DDC5631F49D30300EE83F7 /* Models */ = {
+		E4D70A5F1F4C1F3C008C7860 /* Exchange */ = {
 			isa = PBXGroup;
 			children = (
 				E4DDC5661F49D42700EE83F7 /* ExchangeRateConnection.h */,
 				E4DDC5671F49D42700EE83F7 /* ExchangeRateConnection.m */,
 				E4DDC5691F49D94600EE83F7 /* ExchangeRate.h */,
 				E4DDC56A1F49D94600EE83F7 /* ExchangeRate.m */,
+			);
+			name = Exchange;
+			sourceTree = "<group>";
+		};
+		E4D70A601F4C1F4E008C7860 /* Balance */ = {
+			isa = PBXGroup;
+			children = (
+				E4A97FF91F4C23DA003D47FC /* BalanceManager.h */,
+				E4A97FFA1F4C23DA003D47FC /* BalanceManager.m */,
+			);
+			name = Balance;
+			sourceTree = "<group>";
+		};
+		E4DDC5631F49D30300EE83F7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E4D70A5F1F4C1F3C008C7860 /* Exchange */,
+				E4D70A601F4C1F4E008C7860 /* Balance */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -395,6 +416,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4A97FFB1F4C23DA003D47FC /* BalanceManager.m in Sources */,
 				E49B0B941F44FC7900E526EB /* HomeViewController.m in Sources */,
 				E4EF69281F4A496C00DB3822 /* CurrencyItemView.m in Sources */,
 				E4DDC5681F49D42700EE83F7 /* ExchangeRateConnection.m in Sources */,

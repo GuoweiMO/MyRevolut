@@ -31,6 +31,9 @@
 - (NSString *)currentCurrencySymbol;
 - (double)currentAmountValue;
 - (void)updateAmountFieldToValue:(NSString *)value;
+- (void)updateBalanceLabelWithBalance:(double)balance;
+
+-(void)reloadView;
 
 @end
 

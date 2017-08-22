@@ -29,7 +29,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
   [super viewWillAppear:animated];
-  [self updateBalanceLabel];
 }
 
 - (void)configureCarousel
@@ -38,6 +37,11 @@
   _currencyCarousel.dataSource = self;
   _currencyCarousel.type = iCarouselTypeLinear;
   _currencyCarousel.pagingEnabled = YES;
+}
+
+-(void)reloadView
+{
+  [_currencyCarousel reloadData];
 }
 
 - (CGFloat)carousel:(iCarousel *)carousel valueForOption:(iCarouselOption)option withDefault:(CGFloat)value
@@ -76,12 +80,11 @@
   }
   CurrencyItemView *currentView = (CurrencyItemView *)self.currencyCarousel.currentItemView;
   [currentView setAmountFieldAsFirstResponder];
-  [self updateBalanceLabel];
 }
 
-- (void)updateBalanceLabel
+- (void)updateBalanceLabelWithBalance:(double)balance
 {
-  _currentBalanceLabel.text = [NSString stringWithFormat:@"You have %@100", [self currentCurrencySymbol]];
+  _currentBalanceLabel.text = [NSString stringWithFormat:@"You have %@%.02f", [self currentCurrencySymbol], balance];
 }
 
 - (double)currentAmountValue
